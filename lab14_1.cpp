@@ -4,6 +4,24 @@ using namespace std;
 template <typename T>
 void insertionSort(T d[],int N){
 
+    
+    for(int i = 1; i < N; i++){
+         T score = d[i];
+          int x = i-1;
+        while(x >= 0 && score > d[x]){
+            d[x+1] = d[x];
+            x--;
+        }
+        
+        d[x+1] = score;
+    
+        cout << "Pass " << i << ":";
+        for(int y = 0; y<N; y++){
+            cout << d[y] << " "; 
+        }
+        cout << "\n";
+    }
+    
 }
 
 int main(){
